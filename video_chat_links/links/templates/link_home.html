@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Temperal Link Home Page</h1>
+<body>
+<!-- <form action='{{instance.get_create_url}}/' method="post"> {% csrf_token %} -->
+<form action="create/" method="post"> {% csrf_token %}
+    <input type="submit" value="Create" />
+{% include 'link_list.html' with link_list=link_list %}
+</form>
+</body>
+{% endblock %}

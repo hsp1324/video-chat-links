@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Home Page</h2>
+
+<body>
+	<p>This is a Template</p> 
+	{% for author in Authors %}
+		<li> {{forloop.counter}} - {{author}}</li>
+	{% endfor %}
+</body>
+
+{% endblock content%}
